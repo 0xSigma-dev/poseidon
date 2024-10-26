@@ -1337,6 +1337,9 @@ impl ProgramAccount {
                     "u8" | "i8" => {
                         space += 1;
                     }
+                    "string" => {
+                        space += 4; // Pointer size
+                    }
                     _ => {}
                 }
                 ProgramAccountField {
